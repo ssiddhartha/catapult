@@ -23,9 +23,6 @@ class TracingBackendTest(tab_test_case.TabTestCase):
   @classmethod
   def CustomizeBrowserOptions(cls, options):
     options.AppendExtraBrowserArgs([
-        # Memory maps currently cannot be retrieved on sandboxed processes.
-        # See crbug.com/461788.
-        '--no-sandbox',
 
         # Workaround to disable periodic memory dumps. See crbug.com/513692.
         '--enable-memory-benchmarking'
